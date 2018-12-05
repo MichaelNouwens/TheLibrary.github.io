@@ -288,8 +288,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\journal.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\paper.css" />
+    <Content Include="Content\TheLogo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -316,6 +318,9 @@
     <Content Include="Models\DM.edmx.diagram">
       <DependentUpon>DM.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\TheLibraryManagementSystem - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TheLibraryManagementSystem - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\TheLMS - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

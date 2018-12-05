@@ -9,6 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<form asp-controller="Movies" asp-action="Index">
+    <p>
+        Title: <input type="text" name="SearchString" class="form-control">
+        <br />
+        <input type="submit" value="Filter" class="form-control btn btn-info" />
+    </p>
+</form>
 <div class="container">
     <div class="row">
         @foreach (var item in Model)

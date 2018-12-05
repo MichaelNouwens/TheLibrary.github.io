@@ -18,17 +18,29 @@ namespace LibraryManagementSystem.Controllers
 
         [Authorize(Roles = "Administrator")]
         // GET: AllTheBooks
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var allTheBooks = db.AllTheBooks.Include(a => a.Author).Include(a => a.Category).Include(a => a.Publisher);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                allTheBooks = db.AllTheBooks.Where(s => s.Name.Contains(searchString));
+            }
+
             return View(allTheBooks.ToList());
         }
         [Authorize(Roles = "Student, Staff")]
-        public ActionResult UserIndex(string btnAdd)
+        public ActionResult UserIndex(string searchString)
         {
     
 
             var allTheBooks = db.AllTheBooks.Include(a => a.Author).Include(a => a.Category).Include(a => a.Publisher);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                allTheBooks = db.AllTheBooks.Where(s => s.Name.Contains(searchString));
+            }
+
             return View(allTheBooks.ToList());
         }
 
